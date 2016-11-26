@@ -1,0 +1,69 @@
+---
+layout: default
+---
+<div class="row">
+<div class="col-md-8">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+          <!-- <header class="post-header">
+            <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+                 
+          </header> -->
+
+          <div class="post-content" itemprop="articleBody">
+            <div class="alert alert-dismissible alert-success">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <a href="tel:+84907198888" class="alert-link">Bấm gọi ngay để có giá tốt !</a>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <img src="{{ site.baseurl }}/images/{{ page.img }}">
+              </div>
+              <div class="col-md-8">            
+                <h3 class="post-title" itemprop="name headline">{{ page.title }}</h3> 
+                Giá: <a href="#" class="btn btn-danger">{{ page.price }}</a>
+                <hr>
+                <a href="tel:+84907198888" class="btn btn-primary btn-lg">ĐẶT HÀNG NGAY</a>
+                <hr>
+              </div>
+            </div>
+            {{ content }}
+          </div>
+
+    </article>
+    <div class="row">
+        {% if site.disqus-shortname %}
+         {% include disqus.html %}
+        {% endif %}
+    </div>
+    
+    
+    <div class="row">
+            <ul class="pager">
+             {% if page.next.url %}
+                    <li><a class="next" href="{{page.next.url | prepend: site.baseurl}}">&laquo; {{page.next.title}}</a></li>
+              {% endif %}
+              {% if page.previous.url %}
+                <li><a class="previous" href="{{page.previous.url | prepend: site.baseurl}}">{{page.previous.title}} &raquo;</a></li>
+              {% endif %}
+            </ul>
+    </div>
+</div>
+
+
+{% include sidebar.html %}
+
+</div>
+
+    <script>
+    (function() {
+        var font3 = document.createElement('link'); 
+        font3.type = 'text/css'; 
+        font3.rel = 'stylesheet';
+        font3.href = '{{site.baseurl}}/css/syntax-highlighting.css';
+        var q = document.getElementsByTagName('link')[0]; 
+        q.parentNode.insertBefore(font3, q);
+      })();
+</script>
+
+{% include fb-script.html %}
