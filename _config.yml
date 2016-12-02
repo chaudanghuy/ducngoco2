@@ -38,7 +38,7 @@ paginate_path: /page:num/
 analytics: UA-46158141-1
 
 # Comments
-disqus-shortname: ducngocapple
+disqus-shortname: duc-ngoc-apple
 
 # logo
 favicon: favicon.gif
